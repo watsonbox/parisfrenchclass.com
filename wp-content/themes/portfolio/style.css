@@ -1,0 +1,609 @@
+/*
+Theme Name: Smart Portfolo WP
+Description: SmartPortfolio by Curt Ziegler.
+Version: 1.1
+Author: Curt Ziegler
+Author URI: http://www.curtziegler.com/
+Tags: portfolio
+*/
+
+h1, h2, h3, h4, h5, h6, p,
+img, a
+{
+	outline:0;
+	border:0;
+	margin:0;
+	padding:0;
+}
+html, body
+{
+	background:#f3f5ec;
+}
+body
+{
+	margin:0 auto;
+	
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.8em;
+	color:#858872;
+	text-align:center;
+}
+h1, h2, h3, h4, h5, h6
+{
+	padding:10px 0;
+	font-family:Georgia, "Times New Roman", Times, serif;
+}
+p
+{
+	padding:6px 0;
+}
+h1 { font-size:2em; color:#5a533b; }
+h2 { font-size:1.6em; color:#51767c; }
+h3 { font-size:1.2em; color:#777; }
+h4 { font-size:1.2em; }
+h5 { font-size:1.1em; }
+h6 { font-size:1em; }
+hr
+{
+	color:#fff;
+	background-color:#fff;
+	border:1px dotted #ccc;
+	border-style:none none dotted; 
+}
+#outer
+{
+	background:#f9f9f6 url(images/background.jpg) repeat-x;
+	margin:0 auto;
+	padding:0 0 20px 0;
+}
+.contentWidth /* use if you want to contain text and such to a max width */
+{
+	width:800px;
+	margin:0 auto;
+}
+a
+{
+	color:#51767c;	
+}
+a:hover
+{
+	color:#746d55;
+}
+#logo img
+{
+	display:block;
+	padding:42px 0 20px 0;
+	margin:0 auto;
+}
+
+h2.intro
+{
+	font-size:2em;
+	font-weight:normal;
+	line-height:1.5em;
+	letter-spacing:0.01em;
+	padding:0 0 30px 0;
+}
+
+div.bracket
+{
+	background:url(images/divider.gif) no-repeat top center;
+	width:409px;
+	height:76px;
+	margin:0 auto 20px auto;
+}
+
+img.alignright {float:right; margin:0 0 1em 1em}
+img.alignleft {float:left; margin:0 1em 1em 0}
+img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+a img.alignright {float:right; margin:0 0 1em 1em}
+a img.alignleft {float:left; margin:0 1em 1em 0}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+
+.columns,
+columns-total-1,
+columns-total-2,
+columns-total-3,
+columns-total-4
+{
+	padding:5px 0 15px 0;
+	margin:0 auto;
+}
+
+.columns-total-1
+{
+	width:605px;
+}
+.columns-total-2
+{
+	width:605px;
+}
+.columns-total-3
+{
+	width:755px;
+}
+.columns-total-4
+{
+	width:805px;
+}
+.column
+{
+	float:left;
+}
+.columns-total-1 .column
+{
+	width:600px;
+}
+.columns-total-2 .column
+{
+	width:300px;
+}
+.columns-total-3 .column
+{
+	width:250px;
+}
+.columns-total-4 .column
+{
+	width:200px;
+}
+.column p
+{
+	font-size:100%;
+	line-height:1.8em;
+	padding:10px 12px 0 12px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.column h3
+{
+	padding:10px 0;
+	font-size:1.6em;
+	color:#51767c;
+}
+.column h3 a
+{
+	padding:6px 10px 10px 40px;
+	text-decoration:none;
+}
+.column h3 a:hover 
+{
+	text-decoration:underline;
+}
+#footer
+{
+	clear:both;
+	padding:20px 0 30px 0;
+	background:#f3f5ec url(images/background-footer.gif) repeat-x top center;
+}
+#footer a
+{
+	text-decoration:none;
+}
+#footer a:hover
+{
+	text-decoration:underline;
+}
+.social-media a
+{
+	padding:0 10px;
+}
+#footer p
+{
+	font-size:85%;
+}
+
+.divider
+{
+	border-bottom:3px double #eee;
+}
+.hidden, .alternate 
+{
+	display:none;
+}
+.alert
+{
+	padding:5px 5px 5px 5px;
+	margin:0 auto;
+	background:#51767c;
+	border-left:2px solid #8baaaf;
+	border-right:2px solid #8baaaf;
+	border-bottom:2px solid #8baaaf;
+	width:750px;
+	font-family:Arial, Helvetica, sans-serif;
+}
+.success
+{
+	color:#fff;
+}
+p.noscript
+{
+	padding:20px 0;
+	width:500px;
+	margin:0 auto;
+	background:#990000;
+	color:#fff;
+	
+}
+.expanded
+{
+	background:#fff;
+	border-top:5px solid #eee;
+	border-bottom:2px solid #eee;
+	padding:20px 20px;
+	text-align:left;
+}
+.clearfix .portfolio-post
+{
+	padding:15px 0;
+}
+.expanded .column-75-left
+{
+	width:520px;
+	float:left;
+	padding-right:10px;
+}
+.column-75-left img
+{
+	border:5px solid #eee;
+	padding:1px;
+}
+.expanded .column-25-right
+{
+	width:230px;
+	float:left;
+}
+.expanded .column50
+{
+	width:48%;
+	float:left;
+	padding-right:10px;
+}
+.expanded .column25
+{
+	width:23%;
+	float:left;
+	padding-right:10px;
+}
+.expanded .column33
+{
+	width:32%;
+	float:left;
+	padding-right:10px;
+}
+.breadcrumbs p
+{
+	font-size:80%;
+}
+/* more/less links... */
+a.choices, a.alternate
+{
+	padding:0 0 0 18px;
+}
+a.choices
+{
+	background:url(images/icon-plus.jpg) no-repeat;
+}
+a.alternate
+{
+	background:url(images/icon-minus.jpg) no-repeat;
+}
+#message
+{
+	color:#990000;
+	font-weight:bold;
+}
+
+
+
+
+.contactForm .field
+{
+	padding:10px 0 2px 0;
+}
+.contactForm label
+{
+	display:block;
+	font-weight:bold;
+}
+.contactForm .textbox,
+.contactForm .textarea,
+.contactForm .submit
+{
+	border:1px solid #ccc;
+	padding:6px;
+	font-weight:bold;
+	color:#777;
+	width:300px;
+}
+.contactForm .textarea
+{
+	width:300px;
+	height:100px;
+}
+.contactForm .submit
+{
+	background:#746d55;
+	color:#fff;
+	font-size:90%;
+	font-weight:bold;
+	width:150px;
+}
+
+.contactForm input
+{
+	color:green;
+}
+
+
+#submit,
+#author,
+#email,
+#url,
+#comment,
+.textbox,
+.textarea,
+.submit
+{
+	border:1px solid #ccc;
+	padding:6px;
+	font-weight:bold;
+	color:#777;
+	width:250px;
+}
+
+#submit
+{
+	background:#746d55;
+	color:#fff;
+	font-size:90%;
+	font-weight:bold;
+	width:150px;
+}
+#commentform #comment
+{
+	width:450px;
+}
+
+UL.portfolio
+{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+UL.portfolio LI
+{
+	float:left;
+	border:1px solid #eee;
+	background:#f8f8f8;
+	width:370px;
+	margin:20px 0;
+}
+UL.portfolio .attachment-image
+{
+	border:1px solid #eee;
+}
+UL.portfolio LI.thumb-left
+{
+	clear:both;
+}
+UL.portfolio LI.thumb-right
+{
+	margin-left:16px;
+}
+UL.portfolio p
+{
+	margin:0 auto;
+	padding:20px;
+}
+UL.portfolio p.thumbnail
+{
+	padding-bottom:10px;
+}
+UL.portfolio p.details
+{
+	padding-top:15px;
+}
+UL.portfolio a
+{
+	text-decoration:none;
+	display:block;
+}
+UL.portfolio a:hover
+{
+	color:#111;
+}
+.widgets
+{
+	font-size:90%;
+}
+#searchform
+{
+	background:#eee;
+	border:1px solid #ccc;
+	padding:10px 3px;
+}
+#searchform #searchsubmit
+{
+	background:none;
+	border:0;
+	font-weight:bold;
+	color:#888;
+}
+#searchform #s
+{
+	width:126px;
+}
+.widgets UL,
+.widgets UL LI
+{
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	
+}
+.widgets UL
+{
+	margin:0 0 20px 10px;
+}
+.widgets UL LI UL
+{
+	margin-left:6px;
+	
+}
+.widgets UL LI UL LI
+{
+	list-style-type:circle;
+	margin:0 0 0 20px;
+}
+.widgets UL LI
+{
+	padding:2px 2px 4px 0px;
+}
+
+#calendar_wrap table
+{
+	width:99%;
+}
+#calendar_wrap td
+{
+	padding:4px;
+	border:1px solid #ccc;
+}
+#calendar_wrap td.pad,
+#calendar_wrap #prev,
+#calendar_wrap #next
+{
+	border:0;
+}
+#calendar_wrap caption
+{
+	font-weight:bold;
+}
+
+span.commentslink
+{
+	float:right;
+	font-size:60%;
+	font-weight:normal;
+}
+div.post
+{
+	margin:0 0 20px 0;
+}
+.post h2 a { text-decoration:none; }
+.post h2 a:hover { text-decoration:underline; }
+.post-details
+{
+	font-size:80%;
+	background:#f8f8f8;
+	padding:5px;
+}
+.post-details span
+{
+	float:right;
+}
+.post a.more-link
+{
+	font-weight:bold;
+	text-decoration:none;
+}
+.post a.more-link:hover
+{
+	text-decoration:underline;
+}
+.post .post-details a
+{
+	text-decoration:none;
+}
+.post .post-details a:hover
+{
+	text-decoration:underline;
+}
+OL.commentlist,
+OL.commentlist LI
+{	
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+OL.commentlist LI
+{
+	
+}
+.commentlist .comment
+{
+	padding:10px;
+	margin:0 0 10px 0;
+	background:#f8f8f8;
+}
+.depth-1
+{
+	border:1px solid #eee;
+	border-left:4px solid #eee;
+}
+.commentlist .avatar,
+.commentlist .says
+{
+	display:none;
+}
+.commentlist .comment-author
+{
+	float:left;
+	font-weight:bold;
+}
+
+.commentlist .commentmetadata
+{
+	float:right;
+}
+.commentlist .commentmetadata,
+div.reply
+{
+	font-size:75%;
+}
+.commentlist p,
+div.reply
+{
+	clear:both;
+	padding-left:10px;
+}
+
+li.bypostauthor
+{
+	color:#000;
+}
+
+
+p.pagenav
+{
+	margin:20px 0;;
+}
+.pagenav a
+{
+	padding:5px;
+	background:#f0f0f0;
+	text-decoration:none;
+	margin-right:10px;
+}
+
+
+
+
+/* clearfix start */ 
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+.clearfix {
+    display: inline-block;
+}
+html[xmlns] .clearfix {
+    display: block;
+}
+* html .clearfix {
+    height: 1%;
+}
+/* clearfix end */ 
